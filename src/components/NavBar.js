@@ -31,10 +31,12 @@ export default NavBar;
 
 
 const StyledNav = styled(motion.div)`
-    position: sticky;
+    background: white;
+    position: fixed;
     top: 0;
-    margin-top: -1.5rem;
+    margin-top: -1.2rem;
     width: 100%;
+    z-index: 5;
     overflow: hidden;
     .nav-component {
         display: flex;
@@ -47,7 +49,7 @@ const StyledNav = styled(motion.div)`
     .nav-logo {
         display: flex;
         align-items: center;
-        margin-right: 10rem;
+        margin-right: 0rem;
         img {
             width: 45px;
             height: 45px;
@@ -61,12 +63,14 @@ const StyledNav = styled(motion.div)`
 
     .search-bar {
         padding: 0.7rem 0rem;
-        padding-right: 30rem;
         padding-left: 1rem;
         border-radius: 2rem;
         background: #e8ebec;
         display: flex;
         align-items: center;
+        input {
+            width: 40rem;
+        }
     }
 
     .input-search input {
