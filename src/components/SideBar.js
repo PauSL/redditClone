@@ -147,31 +147,31 @@ const SideBar = () =>  {
                     </div>
                     {activeDropDown === 'bussiness' && (
                     <SideDropDown
-                    initial='closed'
-                    animate={activeDropDown === 'bussiness' ? 'open' : 'closed'}
-                    variants={dropDownVariants}
-                    >
-                        <ul>
-                            <li>GameStop</li>
-                            <li>Moderna</li>
-                            <li>Pfzier</li>
-                            <li>Johnson</li>
-                            <li>Best Buy</li>
-                            <li>Space X</li>
-                            <li>Tesla</li>
-                            <li>Novavax</li>
-                            <li>Apple</li>
-                        </ul>
-                    </SideDropDown>
-                    )}
-                </Item>
-                <Item onClick={() => activeDropDown === 'television' ? setActiveDropDown(null) : setActiveDropDown('television') }  >
-                    <div className="item-content">
-                    <img src={tv} alt="tv" />
-                    <h3>Television</h3>
-                    <img className='arrows' src={activeDropDown === 'television' ? aup : adown } alt="adown" />
-                    </div>
-                    {activeDropDown === 'television' && (
+                        initial='closed'
+                        animate={activeDropDown === 'bussiness' ? 'open' : 'closed'}
+                        variants={dropDownVariants}
+                        >
+                            <ul>
+                                <li>GameStop</li>
+                                <li>Moderna</li>
+                                <li>Pfzier</li>
+                                <li>Johnson</li>
+                                <li>Best Buy</li>
+                                <li>Space X</li>
+                                <li>Tesla</li>
+                                <li>Novavax</li>
+                                <li>Apple</li>
+                            </ul>
+                        </SideDropDown>
+                            )}
+                        </Item>
+                        <Item onClick={() => activeDropDown === 'television' ? setActiveDropDown(null) : setActiveDropDown('television') }  >
+                        <div className="item-content">
+                        <img src={tv} alt="tv" />
+                        <h3>Television</h3>
+                        <img className='arrows' src={activeDropDown === 'television' ? aup : adown } alt="adown" />
+                        </div>
+                        {activeDropDown === 'television' && (
                     <SideDropDown
                     initial='closed'
                     animate={activeDropDown === 'television' ? 'open' : 'closed'}
@@ -232,13 +232,66 @@ export default SideBar;
 
 
 const StyledSideBar = styled(motion.div)`
+    position: absolute;
+    width: 26rem;
+    height: 100%;
+    margin-top: 4rem;
+    margin-left: -10rem;
+    border-right: 1px solid #e8ebec;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
+    &::-webkit-scrollbar{
+    width: 4px;
+    background-color: #fff;
+    }
+    &::-webkit-scrollbar-thumb{
+    background-color: #c0c0c0;
+    border-radius: 10rem;
+    }
+    &::-webkit-scrollbar-button:start {
+        display: block;
+        height: 0.8rem;  // Adjust this value to increase or decrease the space at the top
+        background-color: transparent;  // Make it transparent so it's not visible
+    }
+
+    .pop-btn{
+            position: relative;
+            cursor: pointer;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            padding: 0rem 7rem;
+            background: #e8ebec;
+            border-radius: 1rem;
+            margin-left: -1.2rem;
+            &:hover {
+                background: #d2dadd;
+            }
+            h3{
+                font-weight: lighter;
+                font-size: 1rem;
+            }
+            img {
+            width: 20px; // adjust if needed
+            margin-right: 10px;
+            background: transparent;
+            }
+    } 
+
+    @media screen and (min-width: 1024px) {
+    display: inline;
     position: fixed;
     width: 400px;
     height: 85%;
-    margin-top: 2rem;
+    margin-top: 2.6rem;
     padding: 20px;
     border-right: 1px solid #e8ebec;
     background-color: #fff;
+    margin-left: 1rem;
+    z-index: 1;
     overflow-y: auto;
     overflow-x: hidden;
    &::-webkit-scrollbar{
@@ -265,6 +318,9 @@ const StyledSideBar = styled(motion.div)`
         background: #e8ebec;
         border-radius: 1rem;
         margin-left: -1.2rem;
+        &:hover {
+            background: #d2dadd;
+        }
         h3{
             font-weight: lighter;
             font-size: 1rem;
@@ -275,6 +331,7 @@ const StyledSideBar = styled(motion.div)`
         background: transparent;
         }
     }
+}
    
 `;
 
@@ -345,11 +402,20 @@ const SideDropDown = styled(motion.div)`
     margin-left: 0.5rem;
     overflow: hidden;
     z-index: 10;
+    ul{
+        padding: 0;
+        margin: 0;
+    }
     li{
         list-style: none;
         font-weight: lighter;
         font-size: 0.9rem;
         color: #797979;
         line-height: 2.5rem;
+        padding-left: 1rem;
+        &:hover{
+            border-left: 1px solid #797979;
+            background: #e8ebec;
+        }
     }
 `;

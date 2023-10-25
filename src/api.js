@@ -3,11 +3,16 @@ import axios from "axios";
 
 const BASE_URL = "https://www.reddit.com";
 
-export const fetchPosts = async (subreddit) => {
+export const fetchPosts = async (subreddit, searchTerm = '') => {
     try {
-        const response = await axios.get (`${BASE_URL}/r/${subreddit}/top.json?limit=20&t=hour`)
+        let endpoint = `/r/${subreddit}/top.json?limit=100&t=day`; // Default endpoint
+
+        if (searchTerm) {
+            endpoint = `/r/${subreddit}/search.json?q=${searchTerm}&limit=20&sort=relevance&t=day`; 
+        }
+        const response = await axios.get(`${BASE_URL}${endpoint}`);
         return response.data.data.children.map(post => post.data);
-    }catch (error){
+    } catch (error) {
         throw error;
     }
 };

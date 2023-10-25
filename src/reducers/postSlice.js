@@ -12,9 +12,9 @@ export const postsSlice = createSlice ({
 
 export const {setPosts} = postsSlice.actions;
 
-export const fetchTopPosts = (subreddit) => async (dispatch) => {
+export const fetchTopPosts = (subreddit, searchTerm = '') => async (dispatch) => {
     try {
-        const posts = await fetchPosts(subreddit);
+        const posts = await fetchPosts(subreddit, searchTerm);
         dispatch(setPosts(posts));
     }catch (error) {
         console.error('Error Fetching posts', error);

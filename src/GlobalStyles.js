@@ -11,11 +11,12 @@ const GlobalStyles = createGlobalStyle`
 html {
     &::-webkit-scrollbar{
         width: 2rem;
+        font-family: 'Montserrat', sans-serif;
     }
 }
 
 body {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 `

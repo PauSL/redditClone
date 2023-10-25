@@ -6,19 +6,25 @@ import styled from "styled-components";
 import Post from "./Post";
 
 
-const PostList = ({ subreddit = 'all' }) => {
+const PostList = ({ subreddit = 'all', searchTerm }) => {
 
     const dispatch = useDispatch();
     const posts = useSelector(state => state.posts)
 
     useEffect(() => {
 
-        dispatch(fetchTopPosts(subreddit));
-    },[subreddit, dispatch])
+        dispatch(fetchTopPosts(subreddit, searchTerm));
+    },[subreddit, dispatch, searchTerm])
+
+    const filteredPosts = posts.filter (post => {
+        return post.title.includes(searchTerm)
+    })
+
+
 
     return (
         <StyledPosts>
-            {posts.map(post => <Post key={post.id} post={post} />)}
+            {filteredPosts.map(post => <Post key={post.id} post={post} />)}
         </StyledPosts>
     )
 };
