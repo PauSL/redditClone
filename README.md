@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+Reddit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A front-end application mimicking the user interface of Reddit. Developed using React, Redux, and Styled-components.
 
-## Available Scripts
+Introduction
 
-In the project directory, you can run:
+This project is an attempt to recreate the look and feel of the Reddit platform. While it has been a challenging endeavor, especially given the limitations of the free APIs used, the final result captures the essence of Reddit's user experience, especially on mobile devices.
 
-### `npm start`
+Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Reddit-like UI: Emulating the Reddit user interface using Styled-components for a seamless user experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Mobile Navbar: A feature-rich mobile navigation bar, which was a particular point of focus and required significant iteration and effort to perfect.
 
-### `npm test`
+Responsive Design: The app has been designed to be responsive across various screen sizes, with a particular emphasis on mobile.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Limitations
 
-### `npm run build`
+API Constraints: Due to the use of free APIs, there were instances of prolonged wait times and occasional fetch crashes. To counteract this, generic logos have been used for elements like user avatars and top communities.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React: For building the user interface and handling the state.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Redux: To manage the app's state in a predictable manner.
 
-### `npm run eject`
+Styled-components: All of the styling for this project was accomplished using Styled-components. This provided a clean and modular approach to styling.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Acknowledgements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I'd like to express my gratitude for the support and guidance provided throughout the development of this project. Building this clone was an enriching experience, allowing me to dive deep into the intricacies of UI development and state management.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Feedback
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Your feedback and suggestions are always welcome. Please feel free to contribute or suggest improvements.

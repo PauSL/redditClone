@@ -43,4 +43,6 @@ position: absolute;
     margin-left: 420px; // To account for the sidebar width + padding
     padding: 6rem 3rem;
 }
+
+
 `

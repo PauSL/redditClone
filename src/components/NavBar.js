@@ -279,6 +279,7 @@ const MobileNav = styled(motion.div)`
     display: none;
 }
 
+
 `
 
 const MovSearch = styled(motion.div)`
